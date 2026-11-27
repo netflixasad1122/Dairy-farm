@@ -1,0 +1,23 @@
+{
+  "name": "Dairy Farm",
+  "short_name": "Dairy Farm",
+  "start_url": "./dairy-offline.html",
+  "display": "standalone",
+  "background_color": "#f3f6f4",
+  "theme_color": "#1f6140",
+  "description": "Offline-first dairy farm entry and reporting app",
+  "orientation": "portrait",
+  "scope": "./",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><rect width='1024' height='1024' fill='%231f6140'/><text x='512' y='620' font-family='sans-serif' font-size='420' fill='%23fff' text-anchor='middle' dominant-baseline='central'>&#x1F404;</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><rect width='1024' height='1024' fill='%231f6140'/><text x='512' y='620' font-family='sans-serif' font-size='420' fill='%23fff' text-anchor='middle' dominant-baseline='central'>&#x1F404;</text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
