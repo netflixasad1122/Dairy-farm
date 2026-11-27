@@ -291,12 +291,10 @@ var ui = {
       $('s_name').value = CFG.name || '';
     }
   },
-  setStat: function () {
-    var w = ui.waiting();
-    var t = D && D.at ? new Date(D.at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'never';
-    var badge = online ? '<span class="online-badge">Online</span>' : '<span class="offline-badge">Offline</span>';
-    $('stat').innerHTML = (busy ? 'Syncing... ' : '') + (w ? '· ' + w + ' waiting ' : '') + (online && !busy ? '· ' + t : '') + ' ' + badge;
-  },
+  function setStat(){
+  var w = ui.waiting(), t = D && D.at ? new Date(D.at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'never';
+  var badge = navigator.onLine ? '<span class="online-badge">Online</span>' : '<span class="offline-badge">Offline</span>';
+  $('stat').innerHTML = (busy ? 'Syncing... ' : (navigator.onLine ? 'Online ' : 'Offline ')) + (w ? '· ' + w + ' waiting ' : '') + (online && !busy ? '· ' + t : '');
   waiting: function () {
     return Q.filter(function (x) { return x.status === 'pending'; }).length;
   },
